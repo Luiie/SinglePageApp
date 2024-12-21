@@ -1,6 +1,12 @@
 import './App.css';
+import Lists from './components/Lists';
 
 function App() {
+  const dummyData = [
+    {id: 1, text: "I pictured this year "},
+    {id: 2, text: "a little bit different "},
+    {id: 3, text: "when it hit february."},
+  ]
   return (
     <div className="App">
       <header className="App-header">
@@ -16,6 +22,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <Lists data={dummyData}/>
     </div>
   );
 }
