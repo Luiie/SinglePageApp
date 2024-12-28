@@ -8,9 +8,14 @@ function App() {
     {id: 2, text: "a little bit different "},
     {id: 3, text: "when it hit february."},
   ]
+
+  const addNewListHandler = (newList) => {
+    dummyData.push(newList);
+  };
+
   return (
     <div className="App">
-      <NewList />
+      <NewList onAddList={addNewListHandler} />
       <Lists data={dummyData}/>
     </div>
   );
