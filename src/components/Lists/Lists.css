@@ -1,0 +1,53 @@
+:root {
+    --bg-color: #041019; /* 전체 배경 색상 */
+    --list-bg: #4DA1A9; /* 리스트 배경 */
+    --list-hover: #79D7BE; /* 리스트 호버 배경 */
+    --list-text: #F6F4F0; /* 리스트 텍스트 색상 */
+    --list-hover-text: #041019; /* 리스트 호버 텍스트 색상 (어두운 색) */
+    --body-text: #2E5077; /* 본문 텍스트 색상 */
+    --shadow: rgba(0, 0, 0, 0.1); /* 그림자 */
+}
+
+body {
+    background: var(--bg-color);
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 20px;
+    color: var(--body-text);
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--body-text);
+    text-shadow: 0 2px 4px var(--shadow);
+}
+
+.lists {
+    list-style: none; /* 기본 리스트 스타일 제거 */
+    padding: 0;
+    margin: 20px auto;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* 각 항목 간격 */
+}
+
+.lists li {
+    padding: 15px 20px;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    color: var(--list-text); /* 리스트 텍스트 색상 */
+    background: var(--list-bg); /* 리스트 배경 */
+    border-radius: 8px; /* 모서리 둥글게 */
+    text-align: left; /* 글자를 왼쪽 정렬 */
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* 전환 효과 */
+    box-shadow: 0 4px 6px var(--shadow); /* 그림자 효과 */
+    cursor: pointer;
+}
+
+.lists li:hover {
+    transform: scale(1.03); /* 호버 시 살짝 확대 */
+    background: var(--list-hover); /* 배경색 변화 */
+    color: var(--list-hover-text); /* 텍스트 색상 변화 */
+}
