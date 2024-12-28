@@ -1,16 +1,17 @@
+import { useState } from 'react';
 import './App.css';
 import Lists from './components/Lists/Lists';
 import NewList from './components/NewList/NewList';
 
 function App() {
-  const dummyData = [
+  const [dummyData, setDummyData] = useState([
     {id: 1, text: "I pictured this year "},
     {id: 2, text: "a little bit different "},
     {id: 3, text: "when it hit february."},
-  ]
+  ]);
 
   const addNewListHandler = (newList) => {
-    dummyData.push(newList);
+    setDummyData(dummyData.concat(newList));
   };
 
   return (
